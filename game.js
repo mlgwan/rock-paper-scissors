@@ -22,6 +22,8 @@ function playRound(playerSelection, computerSelection){
     computerSelection = computerSelection.toLowerCase();
     playerSelection = playerSelection.toLowerCase();
     if (playerSelection == computerSelection) {
+        playerSelection = playerSelection.replace(playerSelection.charAt(0), playerSelection.charAt(0).toUpperCase());
+        computerSelection = computerSelection.replace(computerSelection.charAt(0), computerSelection.charAt(0).toUpperCase());
         return `It's a draw! ${playerSelection} equals ${computerSelection}`
     }
     else if (playerSelection == "rock"){
