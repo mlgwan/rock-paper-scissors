@@ -54,7 +54,7 @@ function playRound(playerSelection, computerSelection){
 function game(){
     let currentRound = 1;
     while (currentRound <= roundsInAGame){
-        let playerSelection = prompt("Rock Paper or Scissors?");
+        let playerSelection = prompt(`Rock Paper or Scissors? ${roundsInAGame - currentRound} rounds left.`);
         if (validateInput(playerSelection)){
             let computerSelection = computerPlay();
             console.log(playRound(playerSelection, computerSelection));
