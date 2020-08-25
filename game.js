@@ -64,6 +64,9 @@ function game(){
 }
 
 function validateInput(input){
+    if (input === null) {
+        return false;
+    }
     input = input.toLowerCase();
     if (input == "rock" || input == "paper" || input == "scissors"){
         return true;
